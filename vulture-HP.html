@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<title>JavaScript - Array</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<style>
+#submit {
+	color: #ccc;
+	size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="results"></div>
+
+<script>
+	function winners(winnerData){
+		if(winnerData.length == 0) return;
+		var last = winnerData.length - 1;
+
+		var category = winnerData[last].Category;
+		var nominee = winnerData[last].Nominee;
+		var film = winnerData[last].AssociatedFilm;
+		var VulturePick = winnerData[last].VulturePick;
+		var ReaderPick = winnerData[last].ReaderPick;
+		
+		$('#results').empty();
+		
+		if(category == 'BestPicture'){
+			film = '';
+		}
+		$('<div>'+category+'<br>'+nominee+'<br>'+film+'<br>VulturePick: '+VulturePick+'<br>ReaderPick: '+ReaderPick+'%</div>').appendTo($('#results'));
+	}
+</script>
+	
+<iframe src="oscars.html" width="0" height="0" frameborder="0">	
+</body>
+
+</html>

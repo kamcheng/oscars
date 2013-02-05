@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Oscars db server</title>
+		<script src="/socket.io/socket.io.js"></script>		
+    </head>
+    <body>
+		
+	<script>
+		var socket = io.connect('http://10.176.200.103:3000');
+			
+		socket.on('connect', function(){
+			socket.emit('getWinners');
+		});
+		
+		socket.on('sendWinners', function(data){
+		    parent.winners(data);
+		});
+		
+		socket.on('result', function(data){
+			var arr = [];
+			arr.push(data);
+		    parent.winners(arr);
+		});
+		
+	</script>
+	</body>
+</html>
