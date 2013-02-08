@@ -21,7 +21,7 @@
 	</form>
 	
 	<script>
-	var socket = io.connect('http://localhost:3000');
+	var socket = io.connect('http://10.176.200.103:3000');
 	
 	var readersVote = [{"Category": "BestPicture", "Nominees": [{"NomineeID": "6", "ReaderVote": 1.7969888295288974}, {"NomineeID": "1", "ReaderVote": 2.1369596891694997}, {"NomineeID": "2", "ReaderVote": 26.129188926663428}, {"NomineeID": "0", "ReaderVote": 1.2627489072365226}, {"NomineeID": "3", "ReaderVote": 48.081593006313746}, {"NomineeID": "5", "ReaderVote": 5.7795046138902375}, {"NomineeID": "7", "ReaderVote": 6.2651772705196702}, {"NomineeID": "8", "ReaderVote": 5.9737736765420113}, {"NomineeID": "4", "ReaderVote": 2.5740650801359886}]}, {"Category": "ActorLeading", "Nominees": [{"NomineeID": "2", "ReaderVote": 85.11673151750972}, {"NomineeID": "3", "ReaderVote": 1.7023346303501945}, {"NomineeID": "0", "ReaderVote": 2.8696498054474708}, {"NomineeID": "4", "ReaderVote": 7.6848249027237356}, {"NomineeID": "1", "ReaderVote": 2.6264591439688716}]}, {"Category": "AnimatedFeature", "Nominees": [{"NomineeID": "3", "ReaderVote": 1.1793611793611793}, {"NomineeID": "4", "ReaderVote": 17.100737100737103}, {"NomineeID": "1", "ReaderVote": 11.449631449631449}, {"NomineeID": "0", "ReaderVote": 67.223587223587216}, {"NomineeID": "2", "ReaderVote": 3.0466830466830466}]}, {"Category": "WritingAdapted", "Nominees": [{"NomineeID": "4", "ReaderVote": 32.94059891998036}, {"NomineeID": "2", "ReaderVote": 7.6092292587137944}, {"NomineeID": "0", "ReaderVote": 26.853215513009328}, {"NomineeID": "3", "ReaderVote": 27.196858124693176}, {"NomineeID": "1", "ReaderVote": 5.4000981836033386}]}, {"Category": "ProductionDesign", "Nominees": [{"NomineeID": "1", "ReaderVote": 14.293276866066702}, {"NomineeID": "3", "ReaderVote": 10.11116993118052}, {"NomineeID": "0", "ReaderVote": 42.826892535733194}, {"NomineeID": "2", "ReaderVote": 24.139756484912652}, {"NomineeID": "4", "ReaderVote": 8.6289041821069343}]}, {"Category": "Directing", "Nominees": [{"NomineeID": "2", "ReaderVote": 9.2864125122189645}, {"NomineeID": "4", "ReaderVote": 11.436950146627565}, {"NomineeID": "1", "ReaderVote": 3.8611925708699903}, {"NomineeID": "0", "ReaderVote": 6.8426197458455515}, {"NomineeID": "3", "ReaderVote": 68.572825024437918}]}, {"Category": "DocumentaryShort", "Nominees": [{"NomineeID": "2", "ReaderVote": 9.994447529150472}, {"NomineeID": "4", "ReaderVote": 16.490838423098278}, {"NomineeID": "1", "ReaderVote": 7.8845086063298169}, {"NomineeID": "0", "ReaderVote": 51.138256524153249}, {"NomineeID": "3", "ReaderVote": 14.491948917268186}]}, {"Category": "FilmEditing", "Nominees": [{"NomineeID": "2", "ReaderVote": 10.424305919329493}, {"NomineeID": "0", "ReaderVote": 52.06914614981666}, {"NomineeID": "1", "ReaderVote": 14.143530644316396}, {"NomineeID": "4", "ReaderVote": 20.691461498166579}, {"NomineeID": "3", "ReaderVote": 2.6715557883708749}]}, {"Category": "DocumentaryFeature", "Nominees": [{"NomineeID": "4", "ReaderVote": 49.394550958627647}, {"NomineeID": "3", "ReaderVote": 17.204843592330977}, {"NomineeID": "1", "ReaderVote": 10.191725529767911}, {"NomineeID": "0", "ReaderVote": 5.8526740665993948}, {"NomineeID": "2", "ReaderVote": 17.356205852674066}]}, {"Category": "MusicOriginalScore", "Nominees": [{"NomineeID": "0", "ReaderVote": 7.8338590956887488}, {"NomineeID": "4", "ReaderVote": 13.249211356466878}, {"NomineeID": "2", "ReaderVote": 51.997896950578337}, {"NomineeID": "1", "ReaderVote": 7.6761303890641424}, {"NomineeID": "3", "ReaderVote": 19.242902208201894}]}, {"Category": "ShortFilmAnimated", "Nominees": [{"NomineeID": "0", "ReaderVote": 7.3089700996677749}, {"NomineeID": "4", "ReaderVote": 55.980066445182722}, {"NomineeID": "2", "ReaderVote": 10.354374307862679}, {"NomineeID": "1", "ReaderVote": 8.5825027685492792}, {"NomineeID": "3", "ReaderVote": 17.774086378737543}]}, {"Category": "VisualEffects", "Nominees": [{"NomineeID": "1", "ReaderVote": 78.193479422768576}, {"NomineeID": "2", "ReaderVote": 5.291288081239979}, {"NomineeID": "4", "ReaderVote": 2.351683591662213}, {"NomineeID": "0", "ReaderVote": 11.491181186531268}, {"NomineeID": "3", "ReaderVote": 2.672367717797969}]}, {"Category": "Makeup", "Nominees": [{"NomineeID": "0", "ReaderVote": 4.8665620094191526}, {"NomineeID": "2", "ReaderVote": 22.239665096807954}, {"NomineeID": "1", "ReaderVote": 72.893772893772891}]}, {"Category": "MusicOriginalSong", "Nominees": [{"NomineeID": "0", "ReaderVote": 0.41688379364252209}, {"NomineeID": "3", "ReaderVote": 89.213131839499738}, {"NomineeID": "2", "ReaderVote": 2.0844189682126109}, {"NomineeID": "4", "ReaderVote": 6.7222511724856702}, {"NomineeID": "1", "ReaderVote": 1.5633142261594581}]}, {"Category": "SoundEditing", "Nominees": [{"NomineeID": "0", "ReaderVote": 48.28141783029001}, {"NomineeID": "2", "ReaderVote": 12.459720730397422}, {"NomineeID": "3", "ReaderVote": 10.687432867883997}, {"NomineeID": "4", "ReaderVote": 19.065520945220193}, {"NomineeID": "1", "ReaderVote": 9.5059076262083781}]}, {"Category": "ActorSupporting", "Nominees": [{"NomineeID": "2", "ReaderVote": 10.503175378602833}, {"NomineeID": "4", "ReaderVote": 26.673180263800685}, {"NomineeID": "0", "ReaderVote": 8.2071323888617478}, {"NomineeID": "3", "ReaderVote": 42.745481191988276}, {"NomineeID": "1", "ReaderVote": 11.871030776746458}]}, {"Category": "ActressLeading", "Nominees": [{"NomineeID": "4", "ReaderVote": 6.1254253767622755}, {"NomineeID": "1", "ReaderVote": 6.1254253767622755}, {"NomineeID": "2", "ReaderVote": 49.781234807972773}, {"NomineeID": "0", "ReaderVote": 34.807972775887215}, {"NomineeID": "3", "ReaderVote": 3.1599416626154593}]}, {"Category": "ActressSupporting", "Nominees": [{"NomineeID": "0", "ReaderVote": 2.3323615160349855}, {"NomineeID": "2", "ReaderVote": 81.72983479105929}, {"NomineeID": "4", "ReaderVote": 1.7978620019436347}, {"NomineeID": "3", "ReaderVote": 3.8386783284742467}, {"NomineeID": "1", "ReaderVote": 10.301263362487852}]}, {"Category": "ShortFilmLiveAction", "Nominees": [{"NomineeID": "3", "ReaderVote": 13.109243697478993}, {"NomineeID": "2", "ReaderVote": 15.070028011204482}, {"NomineeID": "0", "ReaderVote": 6.386554621848739}, {"NomineeID": "1", "ReaderVote": 57.983193277310932}, {"NomineeID": "4", "ReaderVote": 7.4509803921568629}]}, {"Category": "WritingOriginal", "Nominees": [{"NomineeID": "4", "ReaderVote": 41.297935103244839}, {"NomineeID": "3", "ReaderVote": 21.189773844641103}, {"NomineeID": "2", "ReaderVote": 1.9665683382497541}, {"NomineeID": "1", "ReaderVote": 29.20353982300885}, {"NomineeID": "0", "ReaderVote": 6.3421828908554581}]}, {"Category": "CostumeDesign", "Nominees": [{"NomineeID": "2", "ReaderVote": 11.051080550098231}, {"NomineeID": "3", "ReaderVote": 3.5363457760314341}, {"NomineeID": "1", "ReaderVote": 21.758349705304518}, {"NomineeID": "0", "ReaderVote": 56.581532416502945}, {"NomineeID": "4", "ReaderVote": 7.0726915520628681}]}, {"Category": "SoundMixing", "Nominees": [{"NomineeID": "3", "ReaderVote": 4.5576407506702417}, {"NomineeID": "0", "ReaderVote": 52.761394101876682}, {"NomineeID": "4", "ReaderVote": 8.2573726541554961}, {"NomineeID": "1", "ReaderVote": 26.273458445040216}, {"NomineeID": "2", "ReaderVote": 8.1501340482573728}]}, {"Category": "Cinematography", "Nominees": [{"NomineeID": "0", "ReaderVote": 5.8127572016460904}, {"NomineeID": "2", "ReaderVote": 69.958847736625515}, {"NomineeID": "1", "ReaderVote": 4.423868312757202}, {"NomineeID": "3", "ReaderVote": 11.98559670781893}, {"NomineeID": "4", "ReaderVote": 7.8189300411522638}]}, {"Category": "ForeignLanguage", "Nominees": [{"NomineeID": "1", "ReaderVote": 1.6248153618906942}, {"NomineeID": "4", "ReaderVote": 1.3786312161496799}, {"NomineeID": "3", "ReaderVote": 2.3633677991137372}, {"NomineeID": "0", "ReaderVote": 93.451501723289027}, {"NomineeID": "2", "ReaderVote": 1.1816838995568686}]}];
 	
@@ -31,7 +31,8 @@
 		
 		function findReaderVote(cat, id){
 			for (var r=0; r<readersVote.length; r++) {
-				if(readersVote[r].Category == cat){
+				var readerCat = readersVote[r].Category.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+				if(readerCat == cat){
 					for (var rn=0; rn<readersVote[r].Nominees.length; rn++) {
 						var readerId = readersVote[r].Nominees[rn].NomineeID;
 						if(readerId == id){
@@ -45,8 +46,8 @@
 		}
 		
 		for (var c=0; c<options.length; c++) {
-			var cat = options[c].Category;
-			$('#firstSelect').append('<option value="' + options[c].Category + '">' + options[c].Category + '</option>');
+			var cat = options[c].Category.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+			$('#firstSelect').append('<option value="' + cat + '">' + cat + '</option>');
 		}
 
 	    $('#firstSelect').change(function() {
@@ -54,7 +55,7 @@
 	        $('#secondSelect').empty();
 	
 	        for (var i=0; i<options.length; i++) {
-				var cat = options[i].Category;
+				var cat = options[i].Category.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
 				if(cat == val){
 					for (var n=0; n<options[i].Nominees.length; n++) {
 						var nom = options[i].Nominees,
@@ -73,7 +74,7 @@
 			winObj.Category = firstSelectVal;
 			
 			for (var i=0; i<options.length; i++) {
-				var cat = options[i].Category;
+				var cat = options[i].Category.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
 				
 				if(cat == firstSelectVal){
 					for (var n=0; n<options[i].Nominees.length; n++) {
@@ -81,7 +82,7 @@
 							id = nom[n].NomineeID;
 						if(id == secondSelectVal){
 							winObj.AssociatedFilm = nom[n].AssociatedFilm;
-							winObj.VulturePick = typeof nom[n].VulturePick === 'undefined' ? 'no' : nom[n].VulturePick.toLowerCase();
+							winObj.VulturePick = typeof nom[n].VulturesPick === 'undefined' ? 'no' : nom[n].VulturesPick.toLowerCase();
 							winObj.NomineeID = id;
 							winObj.Nominee = nom[n].Nominee;
 						

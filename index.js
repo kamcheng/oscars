@@ -25,8 +25,11 @@ var url=require('url');
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 var mongo = require('mongoskin');
-var conn = mongo.db('mongodb://localhost:27017/mydb');
-server.listen(3000);
+var conn = mongo.db('mongodb://10.176.200.103:27017/mydb');
+
+var port = process.env.PORT || 3000;
+
+server.listen(port);
 
 // routing
 /*
