@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  script
+    socket.on('connect', function(){
+    socket.emit('getWinners');
+    });
+    socket.on('sendWinners', function(data){
+    parent.winners(data);
+    });
+    socket.on('result', function(data){
+    var arr = [];
+    arr.push(data);
+    parent.winners(arr);
+    });

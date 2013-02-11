@@ -1,0 +1,25 @@
+!!! 5
+html(lang="en")
+  head
+    title Oscars realtime application
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+    script(src='/socket.io/socket.io.js')
+    script
+        var socket = io.connect('#{hostname}');
+    style
+      #submit {
+       border: 1px solid;
+       color: #333333;
+       cursor: pointer;
+       margin-top: 20px;
+       padding: 5px;
+       size: 16px;
+       width: 80px;
+      }
+      div {
+        display:block;
+        margin-bottom: 15px;
+      }
+  body
+    #main
+      block content

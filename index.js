@@ -26,6 +26,7 @@ var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 var mongo = require('mongoskin');
 var conn = mongo.db('mongodb://10.176.200.103:27017/mydb');
+var jsdom = require('jsdom');
 
 var port = process.env.PORT || 3000;
 
@@ -48,10 +49,58 @@ app.get('/', function (req, res) {
     }
 });
 */
-
-app.get('/:file', function(req, res) {
-    res.sendfile(__dirname+'/'+req.param('file'));
+app.configure(function(){
+  app.set('views', __dirname + '/views');
+  app.set('view engine', 'jade');
+  app.use(express.bodyParser());
+  app.use(express.methodOverride());
+  app.use(require("stylus").middleware({
+      src: __dirname + "/public",
+      dest: __dirname + "/public",
+      compress: false
+    }));
+  app.use(app.router);
+  app.use(express.static(__dirname + '/public'));
 });
+
+app.get('/oscars', function(req, res){
+	res.render('oscars', {hostname: req.headers.host});
+});
+
+app.get('/ballot', function(req, res){
+	res.render('ballot', {hostname: req.headers.host});
+});
+
+app.get('/homepage', function(req, res){
+	res.render('homepage', {hostname: req.headers.host});
+});
+
+app.get('/form', function(req, res){
+	res.render('form', {hostname: req.headers.host});
+});
+
+// app.get('/oscars', function(req, res){
+// 	res.render('index.jade', {hostname: req.headers.host});
+// });
+// 
+// app.get('/vulture-HP.html', function(req, res) {
+//     res.sendfile(__dirname+'/vulture-HP.html');
+// });
+// 
+// app.get('/oscars-ballot.html', function(req, res) {
+//     res.sendfile(__dirname+'/oscars-ballot.html');
+// });
+// 
+// app.get('/form.html', function(req, res) {
+//     res.sendfile(__dirname+'/form.html');
+// });
+
+// app.get('/:file', function(req, res) {
+//     res.sendfile(__dirname+'/'+req.param('file'));
+// });
+
+
+
 
 io.sockets.on('connection', function (socket) {
 	

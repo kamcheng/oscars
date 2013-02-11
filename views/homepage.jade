@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  #results
+  script
+    function winners(winnerData){
+    if(winnerData.length == 0) return;
+    var last = winnerData.length - 1;
+
+    var category = winnerData[last].Category;
+    var nominee = winnerData[last].Nominee;
+    var film = winnerData[last].AssociatedFilm;
+    var VulturePick = winnerData[last].VulturePick;
+    var ReaderPick = winnerData[last].ReaderPick;
+
+    $('#results').empty();
+
+    if(category == 'BestPicture'){
+    film = '';
+    }
+    $('<div>'+category+'<br>'+nominee+'<br>'+film+'<br>VulturePick: '+VulturePick+'<br>ReaderPick: '+ReaderPick+'%</div>').appendTo($('#results'));
+    }
+
+  iframe(src="/oscars", width="0", height="0", frameborder="0")
